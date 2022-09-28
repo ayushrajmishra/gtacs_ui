@@ -8,6 +8,7 @@ import NavbarUI from './components/Navbar/NavbarUI';
 import Curriculum from './pages/curriculum';
 import Test from './pages/Test'
 import Training from './pages/training';
+import Sidebar from './components/Sidebar/Sidebar';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
     <BrowserRouter>
     <div className="app">
     <NavbarUI />
+    <Sidebar />
       <Routes>
         <Route  path="/home" element={<Home />}/>       
          {/* <Route  path="/adduser" element={<AddEditUser/>} />

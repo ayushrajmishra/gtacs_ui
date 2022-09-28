@@ -7,6 +7,7 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import EditIcon from '@mui/icons-material/Edit';
 import { Link } from 'react-router-dom'
+import axios from 'axios'
 
 
 const Home = () => {
@@ -23,7 +24,10 @@ const Home = () => {
 
   useEffect(() => {
     
-    dispatch(loadUserStart())
+    //dispatch(loadUserStart())
+    axios.post('https://localhost:44390/api/Home/SearchUseGetCurrentUserID',null)
+    .then(x=>console.log("Data in home",x))
+    .catch()
 
   }, [])
 console.log("User insode home",users)
